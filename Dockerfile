@@ -8,6 +8,9 @@ RUN apt-get install wget -y
 RUN apt-get install php-fpm -y
 RUN apt-get install php-mysqlnd -y
 
+ENV MYSQL_USER="user"
+ENV MYSQL_PWD="beat"
+
 ADD ./srcs /srcs
 WORKDIR /srcs
 EXPOSE 80 443

@@ -6,8 +6,8 @@ service php7.3-fpm start
 ./phpmyadmininstall.sh
 ./wordpress.sh
 
-mysql -u root -e "CREATE USER 'user'@'localhost' IDENTIFIED BY 'bite';
-GRANT ALL PRIVILEGES ON * . * TO 'user'@'localhost' WITH GRANT OPTION;
+mysql -u root -e "CREATE USER '${MYSQL_USER}'@'localhost' IDENTIFIED BY '${MYSQL_PWD}';
+GRANT ALL PRIVILEGES ON * . * TO '${MYSQL_USER}'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;"
 
 mysql -u root -e "CREATE DATABASE wordpress;"
