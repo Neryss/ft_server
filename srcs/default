@@ -51,6 +51,10 @@ server {
 		try_files $uri $uri/ =404;
 	}
 
+	location /wordpress {
+		root /var/www/html/;
+	}
+
 	# pass PHP scripts to FastCGI server
 	#
 	location ~ \.php$ {

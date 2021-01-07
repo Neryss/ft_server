@@ -9,5 +9,3 @@ rm -rf phpMyAdmin-4.9.7-all-languages.tar.gz
 cd phpmyadmin
 cp /srcs/config.inc.php ./
 cp /srcs/default /etc/nginx/sites-enabled/
-
-mysql -u root -e "SET PASSWORD FOR 'root'@'localhost' = PASSWORD('bite');"
